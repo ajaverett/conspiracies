@@ -84,11 +84,11 @@ with st.container():
         )
     
     fig.update_layout(legend=dict(
-        title="Query Groups", 
+        title="", 
         yanchor="top", 
-        y=1.24,
+        y=1.14,
         xanchor="left", 
-        x=.5))
+        x=.56))
     fig.update_traces(line=dict(color='purple'), selector=0)
     fig.update_layout(xaxis_title="", yaxis_title="Number of posts by month", xaxis_tickformat='%b-%Y')
 
