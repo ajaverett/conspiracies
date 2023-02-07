@@ -18,7 +18,7 @@ with st.container():
     header.header(f':blue[Query: {query}]')
 
     #Load in Data
-    df = pd.read_csv(f"C:/Users/Aj/Desktop/School/CSE310/StreamLit/{query}_reddit.csv")
+    df = pd.read_csv(f"{query}_reddit.csv")
     st.text("")
     st.text("")
 
