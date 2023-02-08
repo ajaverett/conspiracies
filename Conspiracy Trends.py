@@ -1,4 +1,3 @@
-# C:\Users\Aj\Documents\GitHub\conspiracies\dataanalysis.py
 
 import streamlit as st
 import pandas as pd
@@ -138,4 +137,3 @@ with st.container():
     # John Podesta
     # Rothschilds
     # Flat Earth
-
