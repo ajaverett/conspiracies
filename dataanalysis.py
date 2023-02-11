@@ -1,30 +1,47 @@
-# C:\Users\Aj\Documents\GitHub\conspiracies\dataanalysis.py
-
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import re
 
 
-header = st.container()
+beginning = st.container()
+query_section = st.container()
+viz_section = st.container()
+subreddit = st.container()
 
-with st.container():
+with beginning:
     st.title('Analyzing conspiracies through public forum data')
 
-    query = st.selectbox(
-    'Initial Query',
-    ('Podesta', 'Harvey Weinstein','Epstein','Fauci','Wuhan'))
+with query_section:
 
-    header.header(f':blue[Query: {query}]')
+    genre = st.radio("",("Governmental", "Corporate", "Locations", "Scientific","Other"))
+
+    if genre == 'Governmental':
+        query = st.selectbox('Initial Query',('CIA','NSA','Clinton','Fauci','Obama','Trump','QAnon'))
+    elif genre == 'Corporate':
+        query = st.selectbox('Initial Query',('Epstein','Bill Gates','Harvey Weinstein','Musk','Podesta','Soros'))
+    elif genre == 'Locations':
+        query = st.selectbox('Initial Query',('Russia','Ukraine','Wuhan','Wyoming'))
+    elif genre == 'Scientific':
+        query = st.selectbox('Initial Query',('5G','big pharma','Chemtrail','climate change','microchip','plandemic','Vaccine'))
+    elif genre == 'Other':
+        query = st.selectbox('Initial Query',('Alex Jones','fraud','hoax','soy','Transgender','Zodiac'))
+
+    query_display = (np.where(bool(re.search(r'\d', query)),query,np.where(query.isupper(), query, query.capitalize())))
+          
+    beginning.header(f':blue[Query: {query_display}]')
+
+    second_query = st.text_input("Secondary Query")
 
     #Load in Data
-    df = pd.read_csv(f"{query}_reddit.csv")
+    df = pd.read_csv(f"data/{query}_reddit.csv")
+
+with viz_section:
     st.text("")
-    st.text("")
 
-
-
-    st.write('Select Subreddits to include:')
+with subreddit:
+    st.write('Filter down subreddits')
     option_1 = st.checkbox('r/Politics')
     option_2 = st.checkbox('r/PoliticalDiscussion')
     option_3 = st.checkbox('r/conspiracy')
@@ -32,27 +49,16 @@ with st.container():
 
     filters = []
 
-    if option_1:
-        filters.append('politics')
-    if option_2:
-        filters.append('PoliticalDiscussion')
-    if option_3:
-        filters.append('conspiracy')
-    if option_4:
-        filters.append('Freethought')
-
+    if option_1: filters.append('politics')
+    elif option_2: filters.append('PoliticalDiscussion')
+    elif option_3: filters.append('conspiracy')
+    elif option_4: filters.append('Freethought')
 
     # Apply filters to dataframe
     if filters:
         df = df.query("subreddit in @filters")
 
-    st.text("")
-    st.text("")
-
-
-    second_query = st.text_input("Secondary Query")
-
-
+    
     # Make a column to see if the second query is in the df
     df = (df
         .fillna('n/a')
@@ -128,14 +134,6 @@ with st.container():
                                             )
                         )
 
-    st.plotly_chart(fig, use_container_width=True)
+    viz_section.plotly_chart(fig, use_container_width=True)
 
-
-
-
-
-
-    # John Podesta
-    # Rothschilds
-    # Flat Earth
 
