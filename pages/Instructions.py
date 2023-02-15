@@ -11,8 +11,9 @@ with st.container():
             PoliticalDiscussion, and Freethought. To collect this data, we use Reddit's builtin API.")
     st.markdown('''
     To use this interactive graph outlining trends on conspiracies, it is a very simple \
-    process. First, select the initial query that you would like to see trends on. Then, select the subreddits\
-            you want to include. You can then type in a second query to see how it matches up with the first query.\
+    process. First, select the topic you would like to see trends on. Then, select the query from the selected topic\
+    that you would like to see trends on. Then, select the subreddits you want to include. You can then type in a\
+    second query to see how it matches up with the first query.\
                 Lastly, you can mess with various settings on the graph, including:
                 
                 ''')
