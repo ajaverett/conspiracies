@@ -1,4 +1,4 @@
-# streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\dataanalysis_linda.py
+# streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\data_analysis_linda.py
 
 import streamlit as st
 import pandas as pd
