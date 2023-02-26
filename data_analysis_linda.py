@@ -1,3 +1,4 @@
+# Linda's run command
 # streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\data_analysis_linda.py
 
 import streamlit as st
