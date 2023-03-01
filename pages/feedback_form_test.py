@@ -3,8 +3,8 @@ A test contact form.
 """
 
 import streamlit as st
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 # import plotly.express as px
 
 
@@ -15,11 +15,21 @@ with container:
     
 contact_form = """
 	<form action="https://formsubmit.co/lindaspellman@live.com" method="POST">
-     <input type="hidden" name="_captcha" value="false">
-     <input type="text" name="Name" placeholder="Your name" required>
-     <input type="email" name="Email" placeholder="Your email" required>
-     <textarea name="Suggestion" placeholder="Feature Suggestion"></textarea>
-     <button type="submit">Send</button>
+        <table>
+        <input type="hidden" name="_captcha" value="false">
+        <br>
+        <br>
+        <input type="text" name="Name" placeholder="Your name" required>
+        <br>
+        <br>
+        <input type="email" name="Email" placeholder="Your email" required>
+        <br>
+        <br>
+        <textarea name="Suggestion" placeholder="Feature Suggestion"></textarea>
+        <br>
+        <button type="submit">Send</button>
+        </table
+     
 </form>
 """
 
