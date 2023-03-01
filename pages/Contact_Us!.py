@@ -7,11 +7,11 @@ import streamlit as st
 # import numpy as np
 # import plotly.express as px
 
-
 container = st.container()
 
 with container:
     st.title('Give Us Feedback!')
+
     
 contact_form = """
 	<form action="https://formsubmit.co/lindaspellman@live.com" method="POST">
@@ -29,7 +29,6 @@ contact_form = """
         <br>
         <button type="submit">Send</button>
         </table
-     
 </form>
 """
 
