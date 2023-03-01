@@ -6,11 +6,10 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
-
 container = st.container()
 
-with container:
-    st.sidebar.title('Instructions')
+# with container:
+#     st.sidebar.title('Instructions')
 
 with st.container():
     st.title('Analyzing conspiracies through public forum data')

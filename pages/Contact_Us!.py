@@ -10,6 +10,7 @@ import streamlit as st
 container = st.container()
 
 with container:
+    container.header(f':blue[Thoughts?]')
     st.title('Give Us Feedback!')
 
     
