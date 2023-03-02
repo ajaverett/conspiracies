@@ -1,5 +1,5 @@
 # Linda's run command
-# streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\Analyze_Data.py
+# streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\Subreddit_Analysis.py
 
 import streamlit as st
 import pandas as pd
