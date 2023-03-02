@@ -10,6 +10,6 @@ with st.container():
     st.subheader('_Team Lead_')
     st.write('AJ Averett - Data Science Major')
     st.subheader('_Members_')
-    st.write('Kaden Mills')
+    st.write('Kaden Mills - Computer Science Major')
     st.write('Linda Spellman - Computer Science Major')
-    st.write('Tyler Aston')
+    st.write('Tyler Aston - Computer Science Major')
