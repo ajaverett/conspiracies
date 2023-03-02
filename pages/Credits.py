@@ -14,7 +14,9 @@ with st.container():
     st.write('Linda Spellman - Computer Science Major')
     st.write('Tyler Aston - Computer Science Major')
 
+    st.markdown('<br><br><br>',unsafe_allow_html=True)
+
 #Balloons
-clicked = st.button('Click here to see balloons!')
-if clicked:
-    st.balloons()
+    clicked = st.button('Click here to see balloons!')
+    if clicked:
+        st.balloons()
