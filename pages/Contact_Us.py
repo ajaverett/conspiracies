@@ -9,11 +9,7 @@ import streamlit as st
 
 container = st.container()
 
-with container:
-    container.header(f':blue[Thoughts?]')
-    st.title('Give Us Feedback!')
-
-    
+# Uses the formsubmit.co functionality in order to send a message to a specific email address, mine in this case
 contact_form = """
 	<form action="https://formsubmit.co/lindaspellman@live.com" method="POST">
         <table>
@@ -33,9 +29,11 @@ contact_form = """
 </form>
 """
 
-st.markdown(contact_form, unsafe_allow_html=True)
+with container:
+    container.header(f':blue[Thoughts?]')
+    st.title('Give Us Feedback!')
+    st.markdown(contact_form, unsafe_allow_html=True)
 
-# CSS call below not working as expected, based on tutorial video
 # Use local CSS File
 def local_css(file_name):
     with open(file_name) as f:
@@ -43,6 +41,8 @@ def local_css(file_name):
 
 local_css("style/style.css")
 
+
+# Previous attempts at form creation
 # --------------------------------
 
 # # Using the "with" syntax

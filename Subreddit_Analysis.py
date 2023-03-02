@@ -1,6 +1,10 @@
 # Linda's run command
 # streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\Subreddit_Analysis.py
 
+"""
+Main streamlit page, used for the project's focus on analyzing conspiracy theory popularity trends over time.
+"""
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -14,19 +18,21 @@ container = st.container()
 with st.container():
     st.title('Analyzing conspiracies through public forum data')
 
+    # choose a query
     query = st.selectbox(
     'Initial Query',
     ('Podesta', 'Harvey Weinstein','Epstein','Fauci','Wuhan'))
 
+    # display the query
     container.header(f':blue[Query: {query}]')
 
-    #Load in Data
+    # Load in Data
     df = pd.read_csv(f"data/{query}_reddit.csv")
     st.text("")
     st.text("")
 
 
-
+    # choose subreddits to pull data from
     st.write('Select Subreddits to include:')
     option_1 = st.checkbox('r/Politics')
     option_2 = st.checkbox('r/PoliticalDiscussion')
@@ -70,7 +76,7 @@ with st.container():
                     False)))   
     )
 
-    #Tidyer Dates
+    # Tidyer Dates
     df = (df
         .assign(created = lambda x: pd.to_datetime(x['created'], unit='s'))
         .assign(created = lambda x: x['created'].dt.to_period('M').dt.to_timestamp())

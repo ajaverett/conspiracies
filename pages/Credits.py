@@ -1,3 +1,6 @@
+"""
+Credit page for team members.
+"""
 import streamlit as st
 
 container = st.container()
