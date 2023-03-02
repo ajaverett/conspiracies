@@ -1,5 +1,5 @@
 # Linda's run command
-# streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\Subreddit_Analysis.py
+# streamlit run C:\Users\Linda\OneDrive\Desktop\BYU-I_Computer_Science_Major\conspiracies\Data_Analysis.py
 
 """
 Main streamlit page, used for the project's focus on analyzing conspiracy theory popularity trends over time.

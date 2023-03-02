@@ -1,3 +1,7 @@
+"""
+Instruction page.
+"""
+
 import streamlit as st
 
 st.title('Instructions')
@@ -27,3 +31,4 @@ with st.container():
 
     st.markdown('Once you figure everything out, you will be a master at using our site.')
     st.markdown('Enjoy!')
+    # possibly sign our names or team name down here???
