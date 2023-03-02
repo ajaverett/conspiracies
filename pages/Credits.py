@@ -13,3 +13,8 @@ with st.container():
     st.write('Kaden Mills - Computer Science Major')
     st.write('Linda Spellman - Computer Science Major')
     st.write('Tyler Aston - Computer Science Major')
+
+#Balloons
+clicked = st.button('Click here to see balloons!')
+if clicked:
+    st.balloons()
