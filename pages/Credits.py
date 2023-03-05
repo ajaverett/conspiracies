@@ -12,7 +12,7 @@ with st.container():
     st.subheader('_Members_')
     st.write('Kaden Mills - Computer Science Major')
     st.write('Linda Spellman - Computer Science Major')
-    st.write('Tyler Aston - Computer Science Major')
+    st.write('Tyler Aston - Software Engineering Major')
 
     st.markdown('<br><br><br>',unsafe_allow_html=True)
 
